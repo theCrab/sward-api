@@ -1,5 +1,50 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+    section.hero.is-info.is-fullheight
+        div.hero-head
+            header.nav
+                div.container
+                    div.nav-left
+                        a.nav-item
+                            img(src="images/bulma-type-white.png" alt="Logo")
+                    div.nav-right.nav-menu
+                        a.nav-item.is-active About
+                        span.nav-item
+                            a.button.is-dark.is-inverted.download
+                                span.icon
+                                    i.fa.fa-apple
+                                span iPhone App
+                        span.nav-item
+                            a.button.is-success.is-inverted.download
+                                span.icon
+                                    i.fa.fa-android
+                                span Android App
+        div.hero-body
+            div.container.has-text-centered
+                h1.title= title
+                p.subtitle .
+
+                div.field.has-addons.has-addons-centered
+                    p.control
+                        span.select
+                            select 
+                                option(value="usd") USD
+                                option(value="gbp") GBP
+                                option(value="eur") EUR
+                    p.control
+                        input.input(type="text" placeholder="Amount of money")
+                    p.control
+                        span.select
+                            select 
+                                option(value="kes") KES
+                                option(value="tsh") TSH
+                                option(value="ugs") UGS
+                p.control.has-text-centered
+                    br
+                    a.button.is-dark.is-large Transfer Money
+
+    div#modal.modal
+        div.modal-background
+        div.modal-content Any other Bulma elements you want
+        button.modal-close.is-large
